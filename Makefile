@@ -12,9 +12,9 @@ else
 endif
 
 deploy:
-	mkdir -p ${HOME}/var/docker/${repository}/log
-	mkdir -p ${HOME}/var/docker/${repository}/run
-	mkdir -p ${HOME}/var/docker/${repository}/data
+	mkdir -p /var/docker/${repository}/log
+	mkdir -p /var/docker/${repository}/run
+	mkdir -p /var/docker/${repository}/data
 	docker stack deploy -c stack.yml ${repository}
 
 remove:

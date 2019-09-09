@@ -10,8 +10,8 @@ services:
     ports:
       - "6000:80"
     volumes:
-      - "${HOME}/var/docker/nginx/log:/var/log/nginx"
-      - "${HOME}/var/docker/nginx/run:/var/run"
+      - "/var/docker/nginx/log:/var/log/nginx"
+      - "/var/docker/nginx/run:/var/run"
     networks:
       - nginxnet
       - kibananet
