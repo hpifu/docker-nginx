@@ -20,6 +20,7 @@ services:
       - wordpressnet
       - chronografnet
       - vue-accountnet
+      - vue-toolnet
       - go-accountnet
       - go-cloudnet
 networks:
@@ -43,6 +44,9 @@ networks:
   vue-accountnet:
     external: true
     name: vue-accountnet
+  vue-toolnet:
+    external: true
+    name: vue-toolnet
   go-accountnet:
     external: true
     name: go-accountnet
