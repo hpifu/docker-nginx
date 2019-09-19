@@ -1,7 +1,7 @@
 version: "3.5"
 services:
   nginx:
-    image: hatlonely/nginx:1.1.0
+    image: hatlonely/nginx:${version}
     hostname: nginx
     deploy:
       replicas: 1
@@ -23,6 +23,7 @@ services:
       - vue-toolnet
       - go-accountnet
       - go-cloudnet
+      - go-ancientnet
 networks:
   nginxnet:
     name: nginxnet
@@ -53,3 +54,6 @@ networks:
   go-cloudnet:
     external: true
     name: go-cloudnet
+  go-ancientnet:
+    external: true
+    name: go-ancientnet
