@@ -1,4 +1,4 @@
-version=1.1.0
+version=$(shell git describe --tags)
 repository=nginx
 user=hatlonely
 
