@@ -21,6 +21,7 @@ services:
       - chronografnet
       - vue-accountnet
       - vue-toolnet
+      - vue-ancientnet
       - go-accountnet
       - go-cloudnet
       - go-ancientnet
@@ -48,6 +49,9 @@ networks:
   vue-toolnet:
     external: true
     name: vue-toolnet
+  vue-ancientnet:
+    external: true
+    name: vue-ancientnet
   go-accountnet:
     external: true
     name: go-accountnet
