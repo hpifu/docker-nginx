@@ -22,6 +22,7 @@ services:
       - vue-accountnet
       - vue-toolnet
       - vue-ancientnet
+      - vue-gamenet
       - go-accountnet
       - go-cloudnet
       - go-ancientnet
@@ -52,6 +53,9 @@ networks:
   vue-ancientnet:
     external: true
     name: vue-ancientnet
+  vue-gamenet:
+    external: true
+    name: vue-gamenet
   go-accountnet:
     external: true
     name: go-accountnet
