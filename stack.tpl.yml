@@ -1,8 +1,8 @@
 version: "3.5"
 services:
-  nginx:
-    image: hatlonely/nginx:${version}
-    hostname: nginx
+  ${repository}:
+    image: hatlonely/${repository}:${version}
+    hostname: ${repository}
     deploy:
       replicas: 1
       restart_policy:
@@ -10,10 +10,10 @@ services:
     ports:
       - "6000:80"
     volumes:
-      - "/var/docker/nginx/log:/var/log/nginx"
-      - "/var/docker/nginx/run:/var/run"
+      - "/var/docker/${repository}/log:/var/log/nginx"
+      - "/var/docker/${repository}/run:/var/run"
     networks:
-      - nginxnet
+      - ${repository}net
       - kibananet
       - grafananet
       - jenkinsnet
@@ -27,8 +27,8 @@ services:
       - go-cloudnet
       - go-ancientnet
 networks:
-  nginxnet:
-    name: nginxnet
+  ${repository}net:
+    name: ${repository}net
   kibananet:
     external: true
     name: kibananet

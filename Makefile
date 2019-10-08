@@ -15,7 +15,7 @@ remove:
 
 build:
 	docker build --tag=${user}/${repository}:${version} .
-	sed 's/image: ${user}\/${repository}:.*$$/image: ${user}\/${repository}:${version}/g' stack.tpl.yml > stack.yml
+	cat stack.tpl.yml | sed 's/\$${version}/${version}/g' | sed 's/\$${repository}/${repository}/g' > stack.yml
 
 push:
 	docker push ${user}/${repository}:${version}
