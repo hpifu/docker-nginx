@@ -26,6 +26,7 @@ services:
       - go-accountnet
       - go-cloudnet
       - go-ancientnet
+      - go-technet
 networks:
   ${repository}net:
     name: ${repository}net
@@ -65,3 +66,6 @@ networks:
   go-ancientnet:
     external: true
     name: go-ancientnet
+  go-technet:
+    external: true
+    name: go-technet
