@@ -23,6 +23,7 @@ services:
       - vue-toolnet
       - vue-ancientnet
       - vue-gamenet
+      - vue-technet
       - go-accountnet
       - go-cloudnet
       - go-ancientnet
