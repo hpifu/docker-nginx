@@ -19,6 +19,7 @@ services:
       - jenkinsnet
       - wordpressnet
       - chronografnet
+      - portainernet
       - vue-accountnet
       - vue-toolnet
       - vue-ancientnet
@@ -46,6 +47,9 @@ networks:
   chronografnet:
     external: true
     name: chronografnet
+  portainernet:
+    external: true
+    name: portainernet
   vue-accountnet:
     external: true
     name: vue-accountnet
