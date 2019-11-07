@@ -21,6 +21,7 @@ services:
       - chronografnet
       - portainernet
       - e3wnet
+      - consulnet
       - vue-accountnet
       - vue-toolnet
       - vue-ancientnet
@@ -54,6 +55,9 @@ networks:
   e3wnet:
     external: true
     name: e3wnet
+  consulnet:
+    external: true
+    name: consulnet
   vue-accountnet:
     external: true
     name: vue-accountnet
