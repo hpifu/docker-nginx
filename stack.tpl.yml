@@ -20,6 +20,7 @@ services:
       - wordpressnet
       - chronografnet
       - portainernet
+      - e3wnet
       - vue-accountnet
       - vue-toolnet
       - vue-ancientnet
@@ -50,6 +51,9 @@ networks:
   portainernet:
     external: true
     name: portainernet
+  e3wnet:
+    external: true
+    name: e3wnet
   vue-accountnet:
     external: true
     name: vue-accountnet
