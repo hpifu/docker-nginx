@@ -8,6 +8,9 @@ deploy:
 	mkdir -p /var/docker/${repository}/log
 	mkdir -p /var/docker/${repository}/run
 	mkdir -p /var/docker/${repository}/data
+	mkdir -p /var/docker/${repository}/conf
+	cp nginx.conf /var/docker/${repository}/conf
+	cp -r conf.d /var/docker/${repository}/conf
 	docker stack deploy -c stack.yml ${repository}
 
 remove:
